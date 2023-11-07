@@ -1,0 +1,80 @@
+{% extends '../layouts/base.html' %}
+{% load static %}
+
+{% block main-content %}
+  <div class="container-1 z-[100] relative min-h-full">
+      <div class="bg-skew hidden lg:block"></div>
+  
+      <div class="card-1 relative">
+        <div class="pos-item-1 flex justify-center">
+          <img 
+            class="card-1__logo" 
+            src="/media/{{ self.season.logo }}" 
+            alt="Bucal Logo" 
+          />
+        </div>
+  
+        <h3 class="card-1__title mb-[5.438rem]">LOGIN TO YOUR ACCOUNT</h3>
+  
+        <form method="post">
+          {% csrf_token %}
+
+          <div>
+            <ul>
+              {% for error in self.form.non_field_errors %}
+              <li class="error-1">{{ error }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div class="mb-[1.938rem]">
+            <input 
+              class="input-field-1" 
+              type="text" 
+              name="username" 
+              id="username" 
+              placeholder="Username"
+              value="{{ self.form.username.value|default:'' }}"
+            />
+
+            <div>
+              <ul>
+                {% for error in self.form.username.errors %}
+                <li class="error-1">{{ error }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          
+          <div class="mb-[3rem]">
+            <input
+              class="input-field-1" 
+              type="password" 
+              name="password" 
+              id="password"
+              value="{{ self.form.password.value|default:'' }}"
+              placeholder="Password"
+            />
+
+            <div>
+              <ul>
+                {% for error in self.form.password.errors %}
+                <li class="error-1">{{ error }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+
+          <input class="btn-3 mb-[0.5rem]" type="submit" value="LOGIN" /> <br />
+          <div>
+            <a 
+            class="link-2" 
+            href="{% url 'password-reset' %}"
+          >
+            Forgot Password?
+          </a>
+          </div>
+        </form>
+      </div>
+  </div>
+{% endblock main-content %}

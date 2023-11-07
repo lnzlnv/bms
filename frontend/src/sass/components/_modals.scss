@@ -1,0 +1,9 @@
+@use '../abstract/variables' as var;
+@use '../abstract/breakpoints' as br;
+
+.modal-1 {
+  position: fixed;
+  inset: 0 0 0 0;
+  z-index: 100000;
+  background-color: var.$black-3;
+}

@@ -1,0 +1,168 @@
+@use '../abstract/variables' as var;
+@use '../abstract/placeholders' as ph;
+
+.input-field-1 {
+  border-radius: 10px;
+  background: var.$black-10;
+  width: 100%;
+  font: {
+    size: var.$fs-2;
+    family: var.$font-saira;
+  }
+  padding: 0.5em;
+  color: var.$white-1;
+
+  &:is(.filter) {
+    width: max-content;
+  }
+}
+
+.input-field-2 {
+  background-color: var.$gray-1;
+  padding: 0.625em;
+  border-radius: 5px 0 0px 5px;
+  font-size: var.$fs-2;
+  @extend %text-1;
+  width: clamp(100px, 100%, 399px);
+
+  &::placeholder {
+    @extend %text-1;
+  }
+
+  &:focus {
+    outline: 2px solid var.$white-1;
+  }
+}
+
+.input-field-3 {
+  @extend %input-field-1;
+  background: var.$blue-14;
+  text-transform: none;
+  border: none;
+  color: var.$white-1;
+
+
+  &::placeholder {
+    text-transform: capitalize;
+    color: var.$white-1
+  }
+}
+
+.input-field-4 {
+  @extend %input-field-1;
+  background-color: var.$blue-7;
+}
+
+.input-field-5 {
+  background: var.$black-10;
+  font: {
+    family: var.$font-saira;
+    size: 1.8rem;
+  }
+  text-align: center;
+  border-radius: 5px;
+  color: var.$white-1;
+}
+
+.input-field-6 {
+  @extend %input-field-2;
+  background-color: transparent
+}
+
+.input-field-7 {
+  @extend %input-field-2;
+  background-color: var.$blue-8;
+}
+
+.input-field-8 {
+  border-radius: 10px;
+  background: var.$black-10;
+  width: 100%;
+  font: {
+    size: var.$fs-13;
+    family: var.$font-saira;
+  }
+  padding: 0.5em;
+  color: var.$white-1;
+
+  &:is(.filter) {
+    width: max-content;
+  }
+}
+
+.input-group {
+  border-radius: 8px;
+  border: 1px solid var.$black-1;
+  background-color: var.$white-1;
+  padding: 1em;
+}
+
+.label-1 {
+  font: {
+    family: var.$font-saira;
+    size: var.$fs-2;
+    weight: 600;
+  }
+}
+
+.label-2 {
+  font: {
+    size: 2rem;
+    family: var.$font-saira
+  }
+  color: var.$white-1;
+}
+
+.label-3 {
+  font-size: 1.5rem;
+  color: var.$white-1;
+  font-weight: 800;
+  line-height: 0;
+}
+
+.label-4 {
+  color: var.$white-1;
+  font: {
+    family: var.$font-saira;
+    size: var.$fs-2;
+    weight: 600;
+  }
+}
+
+.label-checkbox-1 {
+  color: var.$white-1;
+  font: {
+    weight: 600;
+    family: var.$font-saira;
+    size: 1.6rem;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    height: 20px;
+    width: 20px;
+    background-color: var.$white-1;
+    border-radius: 2px;
+    border: 1px solid var.$white-1;
+    transition: var.$transition-1;
+  }
+}
+
+.input-checkbox-1:checked ~ .btn-toggle {
+  background-color: var.$green-1;
+}
+
+.input-checkbox-1:checked ~ .btn-toggle::before {
+  content: '';
+  background-color: var.$white-1;
+  right: 4px;
+}
+
+.input-checkbox-2 {
+  display: none;
+
+  &:checked ~ .label-checkbox-1::before {
+    background-color: var.$blue-2;
+  }
+}

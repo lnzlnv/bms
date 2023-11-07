@@ -1,0 +1,12 @@
+@use '../abstract/variables' as var;
+
+.team {
+  &__name {
+    font: {
+      size: var.$fs-1;
+      family: var.$font-fugas;
+    }
+    color: var.$white-1;
+    text-align: center;
+  }
+}

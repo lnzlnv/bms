@@ -1,0 +1,18 @@
+{% extends '../layouts/base.html' %}
+{% load static %}
+
+{% block main-content %}
+	<div class="py-[1em] md:pt-[1em] pb-[2em] relative z-[1000] overflow-hidden min-h-full">
+    <div class="bg-skew-4"></div>
+
+    <div class="max-w-[800px] px-[1em] mx-auto">
+      <h1 class="schedule__title bg-skew-2 w-max mb-[2rem]">
+        Reset Password Successful
+      </h1>
+
+      <p class="form-1 p-[1em] text-1 text-center">
+        Your password has been set. You may sign-in <a class="link-3" href="{% url 'authentication:sign-in' %}">here</a>.
+      </p>
+    </div>
+  </div>
+{% endblock main-content %}

@@ -1,0 +1,18 @@
+{% extends '../layouts/base.html' %}
+{% load static %}
+
+{% block main-content %}
+<div class="py-[1em] pb-[2em] px-[1em] relative z-[1000] overflow-hidden min-h-full">
+  <div id="root"></div>
+  <input 
+    type="number"
+    value="{{ self.player_team_id }}"
+    hidden="hidden"
+    id="js-player-team-id"
+  >
+</div>
+{% endblock main-content %}
+
+{% block scripts %}
+  <script src="{% static 'single-player-stats.js' %}"></script>
+{% endblock scripts %}

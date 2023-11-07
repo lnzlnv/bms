@@ -1,0 +1,170 @@
+@use '../../abstract/variables' as var;
+@use '../../abstract/placeholders' as placeholder;
+@use '../../abstract/breakpoints' as br;
+
+.player-info {
+  background-color: var.$white-1;
+  padding-bottom: 0;
+  font-family: var.$font-saira;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  &__name {
+    font: {
+      size: var.$fs-5;
+      weight: 500;
+    }
+    line-height: 20px;
+    margin-bottom: 0.2rem;
+
+    @include br.md {
+      font-size: var.$fs-11;
+      line-height: inherit;
+      color: var.$gray-8;
+      margin-bottom: 0;
+    }
+  }
+
+  &__img {
+    position: relative;
+    bottom: -1px;
+    max-height: 150px;
+  }
+
+  &__team-logo {
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 80px;
+    max-height: 80px;
+    padding: 0.5em;
+  }
+
+  &__jersey-number {
+    color: var.$brown-2;
+    font-size: var.$fs-6;
+    padding: 0.1em 0.5em;
+    font-weight: 700;
+
+    @include br.md {
+      font-size: var.$fs-10;
+      padding: 0;
+      line-height: inherit;
+    }
+
+    & > div {
+      @include br.md {
+        border-right: 1px solid var.$gray-7;
+        padding: 0 0.3em;
+      }
+    }
+  }
+
+  &__details {
+    font: {
+      size: var.$fs-7;
+      weight: 600;
+    }
+    line-height: 13px;
+    color: var.$black-2;
+
+    @include br.md {
+      color: var.$gray-4;
+      font-weight: 400;
+      line-height: 15px;
+    }
+  }
+
+  &__title {
+    font: {
+      size: var.$fs-8;
+      weight: 600
+    }
+    line-height: 20px;
+    margin-bottom: 0.5rem;
+    color: var.$gray-8;
+
+    @include br.md {
+      line-height: 30px;
+      // max-width: 100px;
+    }
+  }
+
+  &__sub-title {
+    color: var.$gray-4;
+    font-size: var.$fs-9;
+  }
+
+  &__legend {
+    min-width: 10px;
+    min-height: 10px;
+    max-width: 10px;
+
+    &:is(.player) {
+      background-color: var.$blue-11;
+    }
+
+    &:is(.league) {
+      background-color: var.$gray-5;
+    }
+  }
+
+  &__bar {
+    width: 100%;
+    max-width: 45px;
+    margin: auto;
+
+    &:is(.player) {
+      background-color: var.$blue-11;
+    }
+
+    &:is(.league) {
+      background-color: var.$gray-6;
+      height: calc(140px * .60);
+    }
+  }
+
+  &__bar-category {
+    text-align: center;
+    padding: 0.5em;
+    font-size: var.$fs-4;
+    font-weight: 600;
+    background-color: var.$gray-3;
+    min-height: 40px;
+
+    &:not(.last) {
+      border-right: 1px solid var.$gray-5;
+    }
+
+    @include br.md {
+      font-size: 1rem;
+    }
+  }
+
+  &__stats-name {
+    @include br.md {
+      color: var.$gray-4;
+      margin-bottom: 0.7rem;
+    }
+  }
+
+  &__player {
+    border-bottom: 1px solid var.$brown-1;
+    padding: 0 0.2em;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var.$gray-3;
+      height: 30px;
+
+      @include br.md {
+        display: block;
+      }
+    }
+  }
+}

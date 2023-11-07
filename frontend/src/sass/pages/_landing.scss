@@ -1,0 +1,64 @@
+@use '../abstract/variables' as var;
+@use '../abstract/breakpoints' as br;
+@use '../abstract/mixins' as mixin;
+
+.hero {
+  &__main {
+    width: 100vw;
+    height: 80vh;
+    background: {
+      position: top center;
+      repeat: no-repeat;
+      size: cover;
+    }
+  }
+
+  &__highlights {
+    width: 100%;
+    min-height: 300px;
+    max-height: 300px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    width: 100%;
+
+    &:is(img) {
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    font: {
+      size: var.$fs-2;
+      family: var.$font-fugas;
+      weight: 600;
+    }
+    text-transform: uppercase;
+    color: var.$white-1;
+    text-align: center;
+  }
+
+  &__standings-title {
+    text-transform: uppercase;
+    font: {
+      size: var.$fs-13;
+      family: var.$font-fugas
+    }
+    position: relative;
+    color: var.$white-1;
+    z-index: 20;
+
+    &:is(.left) {
+      margin: 0;
+      margin-left: 1.7rem;
+    }
+  }
+
+  &__text {
+    font: {
+      size: var.$fs-15;
+      family: var.$font-fugas;
+    }
+    color: var.$white-1;
+    text-wrap: balance;
+  }
+}

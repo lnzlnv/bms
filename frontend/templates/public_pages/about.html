@@ -1,0 +1,30 @@
+{% extends '../layouts/base.html' %}
+{% load static %}
+
+{% block main-content %}
+	<div class="hero-2 h-full overflow-hidden">
+    <div class="hero-2__content h-max relative flex flex-col-reverse justify-end gap-[50px] max-w-[900px] mx-[auto] md:flex-row">
+      <div class="bg-skew lg"></div>
+
+      <div class="flex overflow-hidden mt-[1rem] md:overflow-visible md:grid md-grid-2-column-1 md:gap-x-[20px] md:gap-y-[50px]">
+        {% for school in self.schools %}
+          <img 
+            class="hero-2__school-logo"
+            src="/media/{{ school.logo }}" 
+            alt="{{ school.name }} logo" 
+          />
+        {% endfor %}
+      </div>
+
+      <div>
+        <h1 class="hero-2__title mb-[1rem]">
+          EMPOWERING COLLEGIATE BASKETBALL ATHLETICS
+        </h1>
+
+        <img class="mb-[2rem]" src="{% static 'about-hero.jpeg' %}" alt="" />
+        
+        <p class="hero-2__description">BUCAL: BASKETBALL MANAGEMENT SYSTEM is on the go solution for analyzing basketball statistics. With our comprehensive selection of tools and services that help coaches, connect teams, and empower administrators, you can save time and money.</p>
+      </div>
+    </div>
+  </div>
+{% endblock main-content %}

@@ -1,0 +1,16 @@
+{% extends '../layouts/base.html' %}
+{% load static %}
+
+{% block main-content %}
+    <div class="relative pt-[4em] z-[100] min-h-full overflow-hidden">
+      <div class="bg-skew hidden lg:block"></div>
+
+      {% csrf_token %}
+      
+      <div id="root"></div>
+    </div>
+{% endblock main-content %}
+
+{% block scripts %}
+    <script src="{% static 'public-all-schedules.js' %}"></script>
+{% endblock scripts %}

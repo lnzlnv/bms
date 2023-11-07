@@ -1,0 +1,13 @@
+{% extends '../layouts/base.html' %}
+{% load static %}
+
+{% block main-content %}
+  <div class="pb-[4em] pt-[1em] px-[2em] min-h-full grid grid-container-3 overflow-hidden">
+    <div></div>
+    <div class="h-custom" id="root"></div>
+  </div>
+{% endblock main-content %}
+
+{% block scripts %}
+  <script src="{% static 'public-teams.js' %}"></script>
+{% endblock scripts %}  

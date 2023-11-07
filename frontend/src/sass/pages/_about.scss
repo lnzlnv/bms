@@ -1,0 +1,46 @@
+@use '../abstract/variables' as var;
+@use '../abstract/breakpoints' as br;
+@use '../abstract/placeholders' as ph;
+
+.hero-2 {
+  @include br.lg {
+    padding-top: 11.313em;
+    padding-bottom: 5em;
+  }
+
+  &__content {
+    color: var.$white-1;
+    padding: 1em;
+    z-index: 10;
+    height: max-content;
+  }
+
+  &__title {
+    font-size: 2.25rem;
+    font-family: var.$font-fugas;
+  }
+
+  &__description {
+    text-align: justify;
+    hyphens: auto;
+    font-size: 2rem;
+    font-weight: 300;
+    font-family: var.$font-saira;
+  }
+
+  &__school-logo {
+    min-width: 86px;
+    min-height: 86px;
+    max-width: 86px;
+    max-height: 86px;
+    object-fit: contain;
+
+    &:not(:last-of-type) {
+      padding-right: 0.5em;
+
+      @include br.md {
+        padding-right: 0;
+      }
+    }
+  }
+}

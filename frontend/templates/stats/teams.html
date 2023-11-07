@@ -1,0 +1,20 @@
+{% extends '../layouts/base.html' %}
+{% load static %}
+
+{% block main-content %}
+	<div class="pt-[1em] relative z-[1000] overflow-hidden min-h-full">
+    <div class="bg-skew-4"></div>
+
+    <img
+      class="card-1__logo mx-[auto] mb-[1rem]" 
+      src="/media/{{ self.season.logo }}" 
+      alt="bucal logo"
+    >
+
+    <div id="root"></div>
+  </div>
+{% endblock main-content %}
+
+{% block scripts %}
+  <script src="{% static 'team-stats-table.js' %}"></script>
+{% endblock scripts %}

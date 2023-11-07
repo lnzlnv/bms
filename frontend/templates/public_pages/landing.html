@@ -1,0 +1,60 @@
+{% extends '../layouts/base.html' %}
+{% load static %}
+
+{% block title %}
+	BUCAL
+{% endblock title %}
+
+{% block main-content %}
+	<div>
+		<div 
+			class="relative hero__main"
+			style="background-image: linear-gradient(180deg, rgba(3, 7, 50, 0.634) ,#020946), url('/media/{{ self.main_image.image }}')"
+		>
+			<p class="pos-item-6 hero__text">
+				{{ self.main_image.description }}
+				{% if self.main_image.description is None %}
+					Bucal updates will be posted soon!
+				{% endif %}
+			</p>
+		</div>
+
+		<div class="md:grid grid-2-column-5 gap-[40px] p-[2em] max-w-[1500px] mx-[auto]">
+			<div class="mb-[1rem] md:mb-0">
+				<div class="" id="highlights"></div>
+				<div>
+					<h2 class="hero__title">Bucal Latest News</h2>
+					<div class="min-h-[300px]">
+						{% if self.news.image %}
+							<img
+								class="hero__highlights img"
+								src="/media/{{ self.news.image }}"
+							>
+						{% else %}
+							<p class="text-1 text-center">
+								No available news.
+							</p>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+
+			<input 
+				type="text" 
+				id="js-previous-season"
+				data-id="{{ self.previous_season.id }}"
+				data-year="{{ self.previous_season.year }}"
+				hidden="hidden"
+			/>
+
+			<div 
+				class="relative z-[100000000] px-[1em] md:px-[3em] pt-[1em] pb-[2em]"
+				id="root"
+			></div>
+		</div>
+	</div>
+{% endblock main-content %}
+
+{% block scripts %}
+	<script src="{% static 'public-landing.js' %}"></script>
+{% endblock scripts %}

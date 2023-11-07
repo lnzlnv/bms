@@ -1,0 +1,32 @@
+@use '../abstract/variables' as var;
+@use '../abstract/breakpoints' as br;
+
+.card-1 {
+  border-radius: 20px;
+  background: var.$black-3;
+  padding: 5.438em 1em;
+  text-align: center;
+  max-width: 625px;
+  margin: auto;
+
+  &__logo {
+    border-radius: 49px;
+    border: 1px solid #000;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    max-width: 195px;
+    max-height: 195px;
+  }
+
+  &__title {
+    color: #FFF;
+    font-family: var.$font-fugas;
+    font-size: var.$fs-1;
+    font-style: normal;
+  }
+}
+
+.card-2 {
+  background-color: var.$white-2;
+  padding: 2em;
+  border-radius: 5px;
+}

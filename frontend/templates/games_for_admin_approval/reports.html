@@ -1,0 +1,21 @@
+{% extends '../layouts/base.html' %}
+{% load static %}
+
+{% block main-content %}
+    <div class="relative z-[100] py-[4em] min-h-full overflow-hidden bg-white-1">
+      {% csrf_token %}
+
+      <input 
+        id="js-game-id"
+        type="number" 
+        value="{{ self.game_id }}"
+        hidden
+      />
+
+      <div id="root"></div>
+    </div>
+{% endblock main-content %}
+
+{% block scripts %}
+    <script src="{% static 'games-admin-report.js' %}"></script>
+{% endblock scripts %}

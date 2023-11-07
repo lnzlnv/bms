@@ -1,0 +1,17 @@
+{% extends '../layouts/base.html' %}
+
+{% load static %}
+
+{% block main-content %}
+  <div class="relative z-[100] min-h-full overflow-y-auto overflow-x-hidden">
+    <div class="bg-skew-4"></div>
+    
+    {% csrf_token %}
+
+    <div id="root"></div>
+  </div>
+{% endblock main-content %}
+
+{% block scripts %}
+  <script src="{% static 'admin-account-approval.js' %}"></script>
+{% endblock scripts %}

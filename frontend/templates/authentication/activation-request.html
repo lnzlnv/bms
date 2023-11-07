@@ -1,0 +1,31 @@
+{% extends '../layouts/base.html' %}
+{% load static %}
+
+{% block main-content %}
+	<div class="py-[1em] md:pt-[1em] pb-[2em] relative z-[1000] overflow-hidden min-h-full">
+    <div class="bg-skew-4"></div>
+    
+    <div class="max-w-[800px] px-[1em] mx-auto">
+      <h1 class="schedule__title bg-skew-2 w-max mb-[2rem]">
+        Account Activation Request
+      </h1>
+
+      <form class="form-1 p-[1em]" method="post">
+        {% csrf_token %}
+        {% if not self.has_request_activation %}
+          <p class="text-1">Your account is already expired. You may request to activate your account.</p>
+
+          <div class="text-right">
+            <button class="btn-7 mt-[1rem]">
+              Request Activation
+            </button>
+          </div>
+        {% else %}
+          <p class="text-1">Account Activation Request sent. We will email you at <span class="font-bold">{{ self.user.email }}</span> upon approval. Thank you.</p>
+        {% endif %}
+      </form>
+    </div>
+
+    <div id="root"></div> 
+  </div>
+{% endblock main-content %}

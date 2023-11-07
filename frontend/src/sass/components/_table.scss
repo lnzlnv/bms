@@ -1,0 +1,254 @@
+@use '../abstract/variables' as var;
+@use '../abstract/breakpoints' as br;
+@use '../abstract/placeholders' as ph;
+
+.table-1 {
+  @extend %table-1;
+
+  &:is(.stats) {
+    font-size: 1.2rem;
+  }
+  
+  @include br.lg {
+    text-align: center;
+  }
+
+  &__header {
+    display: none;
+    background-color: var.$blue-6;
+    font-family: var.$font-lora;
+    color: var.$white-1;
+    padding: 0.5em 1em;
+
+    @include br.lg {
+      display: table-cell;
+    }
+
+    &:is(.lg) {
+      min-width: 150px;
+    }
+
+    &:is(.w-max) {
+      width: 150px;
+    }
+  }
+
+  &__row {
+    transition: var.$transition-1;
+
+    &:nth-child(odd) {
+      background-color: var.$gray-1;
+    }
+
+    &:nth-child(even) {
+      background-color: var.$white-3;
+    }
+
+    @include br.lg {
+      &:hover {
+        background-color: var.$blue-3;
+        color: var.$white-1;
+      }
+
+      &:hover .link-1::after {
+        background-color: var.$white-1;
+      }
+    }
+  }
+
+  &__data {
+    padding: 0.5em 1em;
+    font-family: var.$font-saira;
+    align-items: flex-end;
+
+    @media all and (max-width: 768px) {
+      transition: var.$transition-1;
+
+      &:not(.approve, .empty):hover {
+        background-color: var.$blue-3;
+        color: var.$white-1;
+      }
+    }
+
+    &:not(.approve, .empty)::before {
+      content: attr(data-cell) ': ';
+      font-weight: 800;
+
+      @include br.lg {
+        display: none;
+      }
+    }
+
+    &:is(.w-max) {
+      width: 150px;
+    }
+
+    &:is(.name) {
+      color: var.$blue-2;
+      font-weight: 600;
+    }
+  }
+}
+
+.table-2 {
+  font-family: var.$font-saira;
+  @extend %table-1;
+  background-color: var.$white-1;
+  border-radius: 0;
+
+  &__header {
+    border: 1px solid var.$black-1;
+    padding: 0.5em 1em;
+    display: none;
+
+    &:is(.lg) {
+      min-width: 250px;
+    }
+
+    @include br.lg {
+      display: table-cell;
+    }
+  }
+
+  &__row {
+    @media all and (max-width: 768px) {
+      &:nth-child(odd) {
+        background-color: var.$blue-2;
+        color: var.$white-2;
+      }
+    }
+  }
+
+  &__data {
+    border: 1px solid var.$black-1;
+    padding: 0.5em;
+    display: flex;
+    gap: 5px;
+
+    @include br.lg {
+      display: table-cell;
+    }
+
+    &:not(.text-left, .text-right) {
+      text-align: center;
+    }
+
+    &::before {
+      content: attr(data-cell) ' : ';
+      font-weight: 600;
+      text-transform: uppercase;
+
+      @include br.lg {
+        display: none;
+      }
+    }
+
+    &:is(.label-1)::before {
+      content: '';
+    }
+
+    &:is(.label)::before {
+      content: '%';
+    }
+
+    &:is(.active) {
+      background-color: var.$blue-2;
+      color: var.$white-1;
+      font-weight: 600;
+    }
+  }
+
+  & tbody tr:last-child {
+    background-color: var.$blue-6;
+    font-weight: 600;
+    color: var.$white-2;
+  }
+}
+
+.table-3 {
+  font-family: var.$font-saira;
+  @extend %table-1;
+  background-color: var.$white-1;
+  border-radius: 0;
+  
+  @include br.lg {
+    min-width: 330px;
+  }
+
+  th, td {
+    border: 1px solid var.$black-1;
+    padding: 1em;
+  }
+
+  &__data {
+    text-align: center;
+
+    &:is(.active) {
+      background-color: var.$blue-2;
+      color: var.$white-1;
+      font-weight: 600;
+    }
+  }
+
+  .quarters {
+    &:nth-child(1) .quarter-name::after {
+      content: 'st';
+    }
+
+    &:nth-child(2) .quarter-name::after {
+      content: 'nd';
+    }
+
+    &:nth-child(3) .quarter-name::after {
+      content: 'rd';
+    }
+
+    &:nth-child(4) .quarter-name::after {
+      content: 'th';
+    }
+  }
+}
+
+.table-4 {
+  background-color: var.$white-1;
+  border: 1px solid black;
+  width: 100%;
+  font: {
+    family: var.$font-saira;
+    size: 1.3rem;
+  }
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  @include br.md {
+    font-size: 2rem;
+  }
+
+  th, td {
+    border: 1px solid black;
+    padding: 1em;
+  }
+
+  &__header {
+    background-color: var.$blue-3;
+    color: var.$white-1;
+  }
+}
+
+.table-5 {
+  font: {
+    family: var.$font-saira;
+    size: var.$fs-9;
+  }
+  color: var.$white-1;
+  text-align: center;
+  width: 100%;
+
+
+  &__header {
+    min-width: 50px;
+    text-transform: uppercase;
+    
+  }
+}

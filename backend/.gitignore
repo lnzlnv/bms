@@ -1,0 +1,13 @@
+.idea/
+venv
+**/migrations/0**.py
+**/__pycache__/
+staticfiles/
+static/
+/media/team_logo
+/media/schedule_image
+/media/seasons
+/media/announcements
+/media/main
+/media/highlights
+/media/news

@@ -1,0 +1,25 @@
+@use '../abstract/breakpoints' as br;
+@use '../abstract/variables' as var;
+
+.drag-area {
+  text-align: center;
+  border: 2px dashed var.$white-1;
+  min-height: 300px;
+  max-height: 300px; 
+  cursor: pointer;
+  transition: var.$transition-1;
+
+  &:is(.active) {
+    border-color: var.$blue-2;
+  }
+
+  &:is(.uploaded) {
+    border: none;
+  }
+
+  &__text {
+    &:is(.error) {
+      color: var.$red-1 !important;
+    }
+  }
+}

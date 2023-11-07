@@ -1,0 +1,73 @@
+{% extends '../layouts/base.html' %}
+{% load static %}
+
+{% block main-content %}
+  <div class="schedule overflow-hidden lg:overflow-visible">
+    <div class="mb-[4rem]">
+      <h1 class="schedule__title bg-skew-2 w-max">
+        GAME SCHEDULE
+      </h1>
+    </div>
+
+    <div class="lg:grid lg-grid-2-column gap-[50px] mb-[1rem]">
+      <div class="grid grid-2-rows mb-[1rem]">
+        <div class="mb-[1rem]">
+          <h2 class="schedule__title bg-skew-2 w-max">JUNIORS</h2>
+        </div>
+
+        <div class="relative z-[1000] md:p-[2em] h-[100%] flex md:min-h-[459px]">
+          <div class="bg-skew-3"></div>
+
+          {% if self.schedules.junior %}
+            <img
+              class="self-center"
+              src="/media/{{ self.schedules.junior.image }}"
+              alt="juniors schedule"
+            />
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="grid grid-2-rows mb-[1rem]">
+        <div class="mb-[1rem]">
+          <h2 class="schedule__title bg-skew-2 w-max">SENIORS</h2>
+        </div>
+        
+        <div class="relative z-[1000] md:p-[2em] h-[100%] flex md:min-h-[459px]">
+          <div class="bg-skew-3"></div>
+
+          {% if self.schedules.senior %}
+          <img
+            class="m-auto"
+            src="/media/{{ self.schedules.senior.image }}"
+            alt="seniors schedule"
+          />
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mb-[5rem] mt-[2rem]">
+      <a 
+        href="{% url 'public_pages:all-schedules' %}" 
+        class="btn-4"
+      >
+        VIEW ALL
+      </a>
+    </div>
+
+    {% if self.announcement %}
+      <div>
+        <div class="mb-[1rem]">
+          <h1 class="schedule__title bg-skew-2 w-max">ANNOUNCEMENTS</h1>
+        </div>
+        
+        <img 
+          class="mx-auto"
+          src="/media/{{self.announcement.image}}" 
+          alt=""
+        />
+      </div>
+    {% endif %}
+  </div>
+{% endblock main-content %}

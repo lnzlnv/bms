@@ -1,0 +1,114 @@
+@use '../abstract/variables' as var;
+@use '../abstract/breakpoints' as br;
+
+.scoreboard {
+  background-color: var.$black-7;
+  padding: 1em;
+
+  &__label {
+    color: var.$white-1;
+    font: {
+      size: 2rem;
+      weight: 800;
+    }
+    text-align: center;
+  }
+
+  &__score {
+    padding: 0.5em;
+    font: {
+      size: 2.5rem;
+      weight: 800
+    }
+    text-align: center;
+    border: 2px solid var.$black-8;
+    color: var.$red-2;
+    border-radius: 5px;
+  }
+  
+  &__periods {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}
+
+.player-stats {
+  min-height: calc(100% - 1px);
+  position: relative;
+  background-color: var.$white-1;
+
+  &__header {
+    background-color: var.$black-1;
+    padding: 0.5em;
+  }
+
+  &__label {
+    color: var.$white-1;
+    font: {
+      size: 1.5rem;
+      weight: 800;
+    }
+    width: max-content;
+    text-align: center;
+  }
+
+  &__label-2 {
+    font-size: 1.3rem;
+    color: var.$white-1;
+  }
+
+  &__label-3 {
+    background-color: var.$gray-10;
+    font-weight: 800;
+    padding: 0.3em;
+    font-size: 1.3rem;
+  }
+
+  &__players {
+    background-color: var.$white-1;
+    padding: 0.5em;
+    font-size: 1.2rem;
+  }
+}
+
+.substitution {
+  font-style: var.$font-saira;
+
+  &__label {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+
+    &:is(.in) {
+      color: var.$green-1;
+    }
+
+    &:is(.out) {
+      color: var.$red-1;
+    }
+  }
+
+  &__panel {
+    min-height: 250px;
+  }
+
+  &__panel-content {
+    min-height: calc(100% - 39px);
+    overflow: hidden;
+    padding: 1em;
+
+    &:is(.in) {
+      background-color: var.$green-1;
+    }
+
+    &:is(.out) {
+      background-color: var.$red-2;
+    }
+  }
+
+  &__player {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var.$white-1;
+  }
+}

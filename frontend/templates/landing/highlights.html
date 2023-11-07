@@ -1,0 +1,16 @@
+{% extends '../layouts/base.html' %}
+{% load static %}
+
+{% block main-content %}
+	<div class="py-[1em] md:pt-[1em] pb-[2em] relative z-[1000] overflow-hidden min-h-full">
+    <div class="bg-skew-4"></div>
+
+    {% csrf_token %}
+
+    <div id="root"></div> 
+  </div>
+{% endblock main-content %}
+
+{% block scripts %}
+  <script src="{% static 'admin-landing-add-highlights.js' %}"></script>r
+{% endblock scripts %}

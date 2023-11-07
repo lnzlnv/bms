@@ -1,0 +1,68 @@
+@use '../abstract/variables' as var;
+@use '../abstract/breakpoints' as br;
+
+.container-1 {
+  padding: 12em 1em;
+  padding-top: 12em;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.container-2 {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(180deg, rgba(24, 41, 86, 0.00) 0%, #285BDF 100%);
+  padding: 1em 0;
+  overflow-x: auto;
+}
+
+.container-3 {
+  position: relative;
+  background-color: var.$gray-1;
+}
+
+.container-4 {
+  padding-top: 1em;
+  padding-bottom: 2em;
+  position: relative;
+  z-index: 1000;
+  overflow: hidden;
+  max-width: 100%;
+  
+  @include br.md {
+    padding-top: 1em;
+  }
+}
+
+.container-5 {
+  padding: 2em 1em;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.container-6 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  top: 10px;
+  margin: 0 auto;
+  width: max-content;
+}
+
+.container-7 {
+  max-width: 800px;
+  margin: auto;
+  width: 100%;
+  background-color: var.$black-8;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.container-8 {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  top: 10px;
+  margin: 0 auto;
+  width: max-content;
+}

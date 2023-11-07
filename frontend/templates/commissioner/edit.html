@@ -1,0 +1,26 @@
+{% extends '../layouts/base.html' %}
+{% load static %}
+
+{% block main-content %}
+<div class="pt-[1em] relative z-[1000] overflow-hidden lg:px-[5.5em]">
+  <div class="bg-skew-4"></div>
+
+  <div class="px-[1em] md:flex justify-end items-center gap-[50px]">
+    <div class="mb-[1rem] text-left md:mb-[0]">
+      <h1 class="schedule__title bg-skew-2 w-max">EDIT PLAYER</h1>
+    </div>
+
+    <img 
+      class="img-2"
+      src="{% static 'bucal-logo.jpeg' %}" 
+      alt="bucal logo"
+    />
+  </div>
+
+  <div id="root"></div>
+</div>
+{% endblock main-content %}
+
+{% block scripts %}
+  <script src="{% static 'commissioner-edit.js' %}"></script>
+{% endblock scripts %}

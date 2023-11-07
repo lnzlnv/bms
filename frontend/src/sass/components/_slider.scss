@@ -1,0 +1,22 @@
+@use '../abstract/variables' as var;
+@use '../abstract/placeholders' as placeholder;
+
+.slider-1 {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  &__content {
+    flex: 1 0 100%;
+  }
+
+  &__nav {
+    position: absolute;
+    inset: 0 0 0 0;
+  }
+
+  &:hover .btn-slider {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

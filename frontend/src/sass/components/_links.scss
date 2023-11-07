@@ -1,0 +1,43 @@
+@use '../abstract/variables' as var;
+@use '../abstract/placeholders' as placeholder;
+
+.link-1 {
+  position: relative;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.link-2 {
+  position: relative;
+  font: {
+    family: var.$font-saira;
+    size: 1.2rem;
+  }
+  color: var.$white-1;
+
+  &:hover::after {
+    right: 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 2px;
+    bottom: 2px;
+    left: 0;
+    right: 100%;
+    background-color: var.$white-1;
+    transition: var.$transition-1;
+  }
+}
+
+.link-3 {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.link-4 {
+  font-size: 1.3rem;
+  color: var.$blue-2;
+}

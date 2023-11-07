@@ -1,0 +1,19 @@
+@use '../abstract/variables' as var;
+@use '../abstract/breakpoints' as br;
+
+.footer {
+  background-color: var.$blue-1;
+  font-family: var.$font-inter;
+  color: var.$white-1;
+  padding: 0.875em 1em;
+  text-align: center;
+
+  @include br.md {
+    text-align: left;
+  }
+
+  &__copyright {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}

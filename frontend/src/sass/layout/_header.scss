@@ -1,0 +1,117 @@
+@use '../abstract/variables' as var;
+@use '../abstract/breakpoints' as br;
+
+.mobile-header {
+	background-color: var.$blue-1;
+	padding: 1em;
+	overflow: visible;
+	z-index: 100;
+
+	@include br.lg {
+		display: none;
+	}
+
+	&__links {
+		background-color: var.$blue-1;
+		overflow: hidden;
+		text-align: center;
+		height: 0;
+		top: 100%;
+		left: 0;
+		right: 0;
+		transition: var.$transition-1;
+		z-index: 1000;
+	}
+}
+
+.main-header {
+  display: none;
+	background-color: var.$blue-1;
+	height: max-content;
+	color: var.$white-1;
+	padding: 1em;
+
+	@include br.lg {
+		display: flex;
+	}
+
+	&__content {
+		font-family: var.$font-inter;
+	}
+
+	&__title {
+			color: var.$white-1;
+			font-size: 2.25rem;
+			font-weight: 700;
+	}
+
+	&__sub-title {
+			font-size: 1.25rem;
+			font-weight: 500;
+	}
+}
+
+.nav {
+	&:is(.authenticated) {
+		background-color: var.$blue-6;
+		padding: 1em;
+	}
+
+	&__link {
+		display: block;
+		max-width: max-content;
+		position: relative;
+		color: var.$white-2;
+		text-transform: uppercase;
+		
+		font: {
+			size: var.$fs-2;
+			family: var.$font-saira;
+		}
+
+		&:not(.dropdown-content-link):is(.active) {
+			color: var.$white-1;
+			font-weight: 600;
+		}
+
+		&:is(.dropdown-link) {
+			cursor: default;
+		}
+		
+		&:is(.dropdown-content-link):is(.active) {
+			color: var.$white-1;
+			font-weight: 600;
+		}
+
+		&:not(.dropdown-content-link, .notif) {
+			margin-right: 2rem;
+		}
+
+		&:is(.mobile) {
+			margin-bottom: 1rem !important;
+		}
+
+		&:not(.dropdown-link):hover::after,
+		&:is(.sign-up)::after {
+			width: 100%;
+		}
+
+		&:is(.sign-up):hover::after {
+			width: 0;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			background-color: var.$white-1;
+			height: 2px;
+			width: 0;
+			transition: var.$transition-1;
+		}
+
+		&:is(.sign-up) {
+			margin: 0 auto;
+		}
+	}
+}

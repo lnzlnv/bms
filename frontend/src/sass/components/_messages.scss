@@ -1,0 +1,35 @@
+@use '../abstract/breakpoints' as br;
+@use '../abstract/variables' as var;
+@use '../abstract/placeholders' as ph;
+
+.success-1 {
+  background-color: var.$green-1;
+  z-index: 10000;
+  position: relative;
+  width: max-content;
+  @extend %message;
+}
+
+.success-2 {
+  @extend %message;
+  background: var.$blue-2;
+  width: max-content;
+}
+
+.delete-1 {
+  background-color: var.$red-1;
+  @extend %message;
+  z-index: 10000;
+  position: relative;
+  width: max-content;
+}
+
+.success-message {
+  position: fixed;
+  top: 10px;
+  left: 0;
+  right: 0;
+  width: max-content;
+  margin: 0 auto;
+  z-index: 999999999;
+}

@@ -1,0 +1,172 @@
+{% load static %}
+
+<header class="mobile-header relative">
+	<div class="flex justify-between items-center">
+		<img
+			class="img-5"
+			src="{{ self.season.logo }}" 
+			alt="bucal logo" 
+		/>
+
+		<button class="btn-burger flex flex-col gap-[6px] js-btn-burger">
+			<div class="btn-burger__layer js-layer-1"></div>
+			<div class="btn-burger__layer js-layer-2"></div>
+			<div class="btn-burger__layer js-layer-3"></div>
+		</button>
+	</div>
+	
+	<div class="mobile-header__links flex flex-col-reverse items-center absolute js-links">
+		<ul class="flex flex-col my-[1rem]">
+			<li>
+				<a 
+					class="nav__link mobile {{ self.is_landing }}" 
+					href="{% url 'public_pages:landing' %}"
+				>
+					HOME
+				</a>
+			</li>
+			<li>
+				<a 
+					class="nav__link mobile mr-[1rem] {{ self.is_about }}" 
+					href="{% url 'public_pages:about' %}"
+				>
+					ABOUT
+				</a>
+			</li>
+			<li>
+				<a 
+					class="nav__link mr-[1rem] {{ self.is_schedule }}" 
+					href="{% url 'public_pages:schedule' %}"
+				>
+					SCHEDULE
+				</a>
+			</li>
+		</ul>
+			
+			<a 
+				class="btn-2 min-w-[200px]" 
+				href="{% url 'authentication:sign-in' %}"
+			>
+				LOGIN
+			</a>
+	</div>
+</header>
+
+<header class="main-header flex justify-between items-center">
+	<div class="flex items-center gap-[15px]">
+
+		<img class="img-10" src="/media/{{ self.season.logo }}" alt="bucal logo" />
+
+		<div class="main-header__content">
+			<h4 class="main-header__title">BUCAL BMS</h4>
+			<h6 class="main-header__sub-title">Empowering Collegiate Basketball Athletics</h6>
+		</div>
+	</div>
+
+	<nav class="flex items-center">
+		<ul class="flex">
+			<li>
+				<a 
+					class="nav__link {{ self.is_landing }}" 
+					href="{% url 'public_pages:landing' %}"
+				>
+					HOME
+				</a>
+			</li>
+			<li>
+				<a 
+					class="nav__link {{ self.is_about }}" 
+					href="{% url 'public_pages:about' %}"
+				>
+					ABOUT US
+				</a>
+			</li>
+			<li>
+				<a 
+					class="nav__link {{ self.is_schedule }}" 
+					href="{% url 'public_pages:schedule' %}"
+				>
+					SCHEDULE
+				</a>
+			</li>
+			<li>
+				<a 
+					class="nav__link {{ self.is_public_all }}" 
+					href="{% url 'teams:public-all' %}">
+					Teams
+				</a>
+			</li>
+			<li>
+				<a 
+					class="nav__link {{ self.is_players_public }}" 
+					href="{% url 'players:all' %}"
+				>
+					Players
+				</a>			
+			</li>
+			<li>
+				<a
+					class="nav__link {{ self.is_standings }}" 
+					href="{% url 'standings:all' %}"
+				>
+					STANDINGS
+				</a>
+			</li>
+			<li>
+				<div class="dropdown-1">
+					<a 
+						class="nav__link dropdown-link {{ self.is_stats }}" 
+						href="#"
+					>
+						STATS
+					</a>
+
+					<div class="dropdown-1__content">
+						<ul class="m-[1rem]">
+							<li>
+								<a
+									class="nav__link dropdown-content-link mb-[0.5rem] {{ self.is_player }}"
+									href="{% url 'stats:player' %}">
+									P-Stats
+								</a>
+							</li>
+							<li>
+								<a
+									class="nav__link dropdown-content-link {{ self.is_team }}"
+									href="{% url 'stats:team' %}"
+								>
+									T-Stats
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+			<li>
+				<a 
+				class="nav__link {{ self.is_recap }}"
+					href="{% url 'public_pages:recaps' %}"
+				>
+					Recaps
+				</a>
+			</li>
+		</ul>
+		
+		{% if not self.is_login and not self.is_sign_up and not self.is_success %}
+			<a 
+				class="btn-2" 
+				href="{% url 'authentication:sign-in' %}"
+			>
+				LOGIN
+			</a>
+		{% elif self.is_sign_up or self.is_success %}
+			<a 
+				class="btn-2" 
+				href="{% url 'authentication:sign-in' %}"
+			>
+				LOGIN
+			</a>
+		{% else %}
+		{% endif %}
+	</nav>
+</header>

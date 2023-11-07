@@ -1,0 +1,107 @@
+@use '../abstract/variables' as var;
+
+%btn-1 {
+	border: 2px solid transparent;
+	transition: var.$transition-1;
+	padding: 0.5em;
+	border-radius: 8px;
+  min-width: max-content;
+  max-height: fit-content;
+  font: {
+		size: var.$fs-2;
+		family: var.$font-saira;
+	}
+  border-color: var.$blue-2;
+}
+
+%btn-2 {
+  padding: 0.3em 0.5em;
+	border-radius: 5px;
+  font-weight: 600;
+	transition: var.$transition-1;
+  color: var.$white-1;
+}
+
+%btn-3 {
+  padding: 1em;
+	font: {
+		size: 1.5rem;
+		weight: 600;
+	}
+	color: var.$white-1;
+	border-radius: 5px;
+	transition: var.$transition-1;
+}
+
+%btn-4 {
+  padding: 0 0.5em;
+	font-weight: 800;
+	color: var.$white-1;
+	min-width: 24.25px;
+  border-radius: 2px;
+}
+
+%btn-hover-1 {
+  &:hover {
+		background: var.$white-1;
+		color: var.$black-1;
+	}
+}
+
+%text-1 {
+	color: var.$white-1;
+  font-family: var.$font-saira;
+}
+
+%text-2 {
+  font: {
+    size: var.$fs-12;
+    weight: 800;
+    family: var.$font-inter;
+  }
+}
+
+%input-field-1 {
+	border: 1px solid var.$black-1;
+	border-radius: 5px;
+  font: {
+    size: var.$fs-2;
+    family: var.$font-saira;
+  }
+  width: 100%;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+  transition: var.$transition-1;
+}
+
+%input-field-2 {
+  width: 50px;
+  text-align: center;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    display: none;
+  }
+}
+
+%message {
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 600px;
+  font: {
+    size: 1.5rem;
+    family: var.$font-saira;
+    weight: 600;
+  }
+  color: var.$white-1;
+  text-align: center;
+}
+
+
+%table-1 {
+  font-size: var.$fs-4;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}

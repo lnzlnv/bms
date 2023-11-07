@@ -1,0 +1,40 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Holtwood+One+SC&family=Inter:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat+Alternates:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Saira+Condensed:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>{% block title %} BUCAL {% endblock title %}</title>
+</head>
+<body>
+    <div 
+        {% if self.request.user.is_authenticated %}
+            class="grid grid-container-1 min-h-screen main-bg overflow-x-hidden authenticated"
+        {% else %}
+            class="grid grid-container-1 min-h-screen main-bg overflow-x-hidden"
+        {% endif %}
+    >
+        {% if self.request.user.is_authenticated %}
+            {% include './_header-2.html' %}
+        {% else %}
+            {% include './_header.html' %}
+        {% endif %}
+
+        <main class="overflow-hidden">
+            {% block main-content %}{% endblock main-content %}
+        </main>
+
+        {% include './_footer.html' %}
+    </div>
+
+    <script src="{% static 'toggle-navbar.js' %}"></script>
+    {% block scripts %}{% endblock scripts %}
+</body>
+</html>

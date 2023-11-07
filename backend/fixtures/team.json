@@ -1,0 +1,244 @@
+[
+  {
+    "model": "teams.Team",
+    "pk": "1",
+    "fields": {
+        "name": "ADNU",
+        "division": "J",
+        "logo": "/dummy_data/logo-adnu.png",
+        "created_at": "2023-08-30 08:54:04.03537+08",
+        "modified_at": "2023-08-30 08:54:04.03537+08"
+      }
+  },
+  {
+    "model": "teams.Team",
+    "pk": "2",
+    "fields": {
+        "name": "NCF",
+        "division": "J",
+        "logo": "/dummy_data/logo-ncf.png",
+        "created_at": "2023-08-30 08:54:04.03537+08",
+        "modified_at": "2023-08-30 08:54:04.03537+08"
+      }
+  },
+  {
+    "model": "teams.Team",
+    "pk": "3",
+    "fields": {
+        "name": "UNC",
+        "division": "J",
+        "logo": "/dummy_data/logo-unc.png",
+        "created_at": "2023-08-30 08:54:04.03537+08",
+        "modified_at": "2023-08-30 08:54:04.03537+08"
+      }
+  },
+  {
+    "model": "teams.Team",
+    "pk": "4",
+    "fields": {
+        "name": "SVC",
+        "division": "J",
+        "logo": "/dummy_data/logo-shepherd.png",
+        "created_at": "2023-08-30 08:54:04.03537+08",
+        "modified_at": "2023-08-30 08:54:04.03537+08"
+      }
+  },
+  {
+    "model": "teams.Team",
+    "pk": "5",
+    "fields": {
+        "name": "NPC",
+        "division": "J",
+        "logo": "/dummy_data/logo-npc.png",
+        "created_at": "2023-08-30 08:54:04.03537+08",
+        "modified_at": "2023-08-30 08:54:04.03537+08"
+      }
+  },
+  {
+    "model": "teams.Team",
+    "pk": "6",
+    "fields": {
+        "name": "USI",
+        "division": "J",
+        "logo": "/dummy_data/logo-usi.png",
+        "created_at": "2023-08-30 08:54:04.03537+08",
+        "modified_at": "2023-08-30 08:54:04.03537+08"
+      }
+  },
+  {
+    "model": "teams.Team",
+    "pk": "7",
+    "fields": {
+        "name": "MPCF",
+        "division": "J",
+        "logo": "/dummy_data/logo-mpcf.png",
+        "created_at": "2023-08-30 08:54:04.03537+08",
+        "modified_at": "2023-08-30 08:54:04.03537+08"
+      }
+  },
+  {
+    "model": "teams.Team",
+    "pk": "8",
+    "fields": {
+        "name": "ACC",
+        "division": "J",
+        "logo": "/dummy_data/logo-acc.png",
+        "created_at": "2023-08-30 08:54:04.03537+08",
+        "modified_at": "2023-08-30 08:54:04.03537+08"
+      }
+  },
+  {
+    "model": "teams.Team",
+    "pk": "9",
+    "fields": {
+        "name": "ANNUNCIATION",
+        "division": "J",
+        "logo": "/dummy_data/logo-annunciation.png",
+        "created_at": "2023-08-30 08:54:04.03537+08",
+        "modified_at": "2023-08-30 08:54:04.03537+08"
+      }
+  },
+  {
+    "model": "teams.Team",
+    "pk": "10",
+    "fields": {
+        "name": "STI",
+        "division": "J",
+        "logo": "/dummy_data/logo-sti.png",
+        "created_at": "2023-08-30 08:54:04.03537+08",
+        "modified_at": "2023-08-30 08:54:04.03537+08"
+      }
+  },
+  {
+    "model": "teams.Team",
+    "pk": "11",
+    "fields": {
+        "name": "ACLC",
+        "division": "J",
+        "logo": "/dummy_data/logo-aclc.png",
+        "created_at": "2023-08-30 08:54:04.03537+08",
+        "modified_at": "2023-08-30 08:54:04.03537+08"
+      }
+  },
+  {
+    "model": "teams.Team",
+    "pk": "12",
+    "fields": {
+        "name": "PASACAO ACADEMY",
+        "division": "J",
+        "logo": "/dummy_data/logo-pasacao.png",
+        "created_at": "2023-08-30 08:54:04.03537+08",
+        "modified_at": "2023-08-30 08:54:04.03537+08"
+      }
+  },
+  {
+    "model": "teams.Team",
+    "pk": "13",
+    "fields": {
+        "name": "ADNU",
+        "division": "S",
+        "logo": "/dummy_data/logo-adnu.png",
+        "created_at": "2023-08-30 08:54:04.03537+08",
+        "modified_at": "2023-08-30 08:54:04.03537+08"
+      }
+  },
+  {
+    "model": "teams.Team",
+    "pk": "14",
+    "fields": {
+        "name": "NCF",
+        "division": "S",
+        "logo": "/dummy_data/logo-ncf.png",
+        "created_at": "2023-08-30 08:54:04.03537+08",
+        "modified_at": "2023-08-30 08:54:04.03537+08"
+      }
+  },
+  {
+    "model": "teams.Team",
+    "pk": "15",
+    "fields": {
+        "name": "UNC",
+        "division": "S",
+        "logo": "/dummy_data/logo-unc.png",
+        "created_at": "2023-08-30 08:54:04.03537+08",
+        "modified_at": "2023-08-30 08:54:04.03537+08"
+      }
+  },
+  {
+    "model": "teams.Team",
+    "pk": "16",
+    "fields": {
+        "name": "SVC",
+        "division": "S",
+        "logo": "/dummy_data/logo-shepherd.png",
+        "created_at": "2023-08-30 08:54:04.03537+08",
+        "modified_at": "2023-08-30 08:54:04.03537+08"
+      }
+  },
+  {
+    "model": "teams.Team",
+    "pk": "17",
+    "fields": {
+        "name": "CSPC",
+        "division": "S",
+        "logo": "/dummy_data/logo-cspc.png",
+        "created_at": "2023-08-30 08:54:04.03537+08",
+        "modified_at": "2023-08-30 08:54:04.03537+08"
+      }
+  },
+  {
+    "model": "teams.Team",
+    "pk": "18",
+    "fields": {
+        "name": "USI",
+        "division": "S",
+        "logo": "/dummy_data/logo-usi.png",
+        "created_at": "2023-08-30 08:54:04.03537+08",
+        "modified_at": "2023-08-30 08:54:04.03537+08"
+      }
+  },
+  {
+    "model": "teams.Team",
+    "pk": "19",
+    "fields": {
+        "name": "MPCF",
+        "division": "S",
+        "logo": "/dummy_data/logo-mpcf.png",
+        "created_at": "2023-08-30 08:54:04.03537+08",
+        "modified_at": "2023-08-30 08:54:04.03537+08"
+      }
+  },
+  {
+    "model": "teams.Team",
+    "pk": "20",
+    "fields": {
+        "name": "ACC",
+        "division": "S",
+        "logo": "/dummy_data/logo-acc.png",
+        "created_at": "2023-08-30 08:54:04.03537+08",
+        "modified_at": "2023-08-30 08:54:04.03537+08"
+      }
+  },
+  {
+    "model": "teams.Team",
+    "pk": "21",
+    "fields": {
+        "name": "ANNUNCIATION",
+        "division": "S",
+        "logo": "/dummy_data/logo-annunciation.png",
+        "created_at": "2023-08-30 08:54:04.03537+08",
+        "modified_at": "2023-08-30 08:54:04.03537+08"
+      }
+  },
+  {
+    "model": "teams.Team",
+    "pk": "22",
+    "fields": {
+        "name": "CCDI",
+        "division": "S",
+        "logo": "/dummy_data/logo-ccdi.png",
+        "created_at": "2023-08-30 08:54:04.03537+08",
+        "modified_at": "2023-08-30 08:54:04.03537+08"
+      }
+  }
+]

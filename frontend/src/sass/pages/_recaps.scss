@@ -1,0 +1,64 @@
+@use '../abstract/variables' as var;
+@use '../abstract/breakpoints' as br;
+@use '../abstract/placeholders' as ph;
+
+.recaps {
+  padding: 0 1em;
+
+  @include br.lg {
+    padding: 0 5vw;
+  }
+
+  @include br.xl {
+    padding: 0 10vw;
+  }
+
+  &__date {
+    font: {
+      size: var.$fs-1;
+      weight: 700;
+      family: var.$font-lora;
+    }
+    background-color: var.$gray-7;
+    border-radius: 5px;
+    padding: 0.2em 0.5em;
+    margin-bottom: 1rem;
+    text-wrap: balance;
+
+    @include br.md {
+      width: max-content;
+    }
+  }
+
+  &__content {
+    background: var.$gray-7;
+    padding: 1em;
+    margin-bottom: 2rem;
+  }
+
+  &__img {
+    width: 72px;
+    height: 72px;
+  }
+
+  &__score {
+    @extend %text-2;
+    color: var.$blue-15;
+
+    &:is(.winner) {
+      color: var.$blue-16;
+    }
+  }
+
+  &__vs {
+    @extend %text-2;
+  }
+
+  &__division {
+    font: {
+      size: 2rem;
+      weight: 800;
+      family: var.$font-lora;
+    }
+  }
+}

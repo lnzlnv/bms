@@ -1,0 +1,16 @@
+{% extends '../layouts/base.html' %}
+{% load static %}
+
+{% block main-content %}
+    <div class="relative z-[100] py-[1em] min-h-full overflow-hidden">
+      <div class="bg-skew hidden lg:block"></div>
+
+      {% csrf_token %}
+
+      <div id="root"></div>
+    </div>
+{% endblock main-content %}
+
+{% block scripts %}
+    <script src="{% static 'games-for-admin-approval.js' %}"></script>
+{% endblock scripts %}

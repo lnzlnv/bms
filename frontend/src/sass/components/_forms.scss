@@ -1,0 +1,8 @@
+@use '../abstract/breakpoints' as br;
+@use '../abstract/variables' as var;
+@use '../abstract/placeholders' as ph;
+
+.form-1 {
+  background-color: var.$black-3;
+  border-radius: 5px;
+}

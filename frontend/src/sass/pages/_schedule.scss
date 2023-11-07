@@ -1,0 +1,31 @@
+@use '../abstract/breakpoints' as br;
+@use '../abstract/variables' as var;
+
+.schedule {
+  padding: 1em;
+  padding-bottom: 0;
+  margin: auto;
+  max-width: 1000px;
+
+  &__title {
+    text-transform: uppercase;
+    font: {
+      size: var.$fs-2;
+      family: var.$font-fugas
+    }
+    position: relative;
+    color: var.$white-1;
+    z-index: 20;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include br.md {
+      font-size: var.$fs-3;
+    }
+
+    &:is(.left) {
+      margin: 0;
+      margin-left: 1.7rem;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<li>
+  <a
+    class="nav__link {{ self.is_admin_announcements }}"
+    href="{% url 'announcements:all' %}"
+  >
+    Announcements
+  </a>
+</li>
+<li>
+  <a
+    class="nav__link {{ self.is_admin_season }}"
+    href="{% url 'administration:all-season' %}"
+  >
+    Seasons
+  </a>
+</li>
+<li>
+  <a
+    class="nav__link {{ self.is_admin_schedule }}"
+    href="{% url 'game_schedule:all' %}"
+  >
+    Schedules
+  </a>
+</li>
+<li>
+  <a
+    class="nav__link {{ self.is_admin_teams }}"
+    href="{% url 'teams:all' %}"
+  >
+    Teams
+  </a>
+</li>
+<li>
+  <a
+    class="nav__link {{ self.is_admin_banner }}"
+    href="{% url 'game_schedule:banner-all' %}"
+  >
+    Banners
+  </a>
+</li>
+<li>
+  <a
+    class="nav__link {{ self.is_admin_landing }}"
+    href="{% url 'landing:content' %}"
+  >
+    Landing
+  </a>
+</li>
